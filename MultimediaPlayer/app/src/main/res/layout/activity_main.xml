@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- This is the layout file — it defines the UI (buttons, video view, etc.) -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:id="@+id/main"
+    android:background="#121212">
+
+    <!-- Title text at the top -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Media Player App"
+        android:textSize="22sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:paddingBottom="12dp"/>
+
+    <!-- VideoView: This widget is used to play/show video on screen -->
+    <!-- It stays hidden until a video URL is opened -->
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:visibility="gone"/>
+
+    <!-- Label to show what is currently loaded/playing -->
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No file loaded"
+        android:textColor="#AAAAAA"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"/>
+
+    <!-- ─── ROW 1: Open file / Open URL ─── -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+        <!-- Button to pick an audio file from internal storage -->
+        <Button
+            android:id="@+id/btnOpenFile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Open File"
+            android:layout_marginEnd="4dp"
+            android:backgroundTint="#1E88E5"/>
+
+        <!-- Button to enter a video URL and stream it -->
+        <Button
+            android:id="@+id/btnOpenUrl"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Open URL"
+            android:layout_marginStart="4dp"
+            android:backgroundTint="#8E24AA"/>
+    </LinearLayout>
+
+    <!-- ─── ROW 2: Play / Pause ─── -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+        <!-- Play button: starts or resumes playback -->
+        <Button
+            android:id="@+id/btnPlay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=" Play"
+            android:layout_marginEnd="4dp"
+            android:backgroundTint="#43A047"/>
+
+        <!-- Pause button: pauses playback without resetting position -->
+        <Button
+            android:id="@+id/btnPause"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=" Pause"
+            android:layout_marginStart="4dp"
+            android:backgroundTint="#FB8C00"/>
+    </LinearLayout>
+
+    <!-- ─── ROW 3: Stop / Restart ─── -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+        <!-- Stop button: stops playback and resets to beginning -->
+        <Button
+            android:id="@+id/btnStop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=" Stop"
+            android:layout_marginEnd="4dp"
+            android:backgroundTint="#E53935"/>
+
+        <!-- Restart button: goes back to start and plays again -->
+        <Button
+            android:id="@+id/btnRestart"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=" Restart"
+            android:layout_marginStart="4dp"
+            android:backgroundTint="#546E7A"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/main"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:gravity="center"
+
+    android:layout_height="match_parent">
+
+    <!-- Accelerometer Data -->
+    <TextView
+        android:id="@+id/accmeter"
+        android:text="Accelerometer Data"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- Light Sensor Data -->
+    <TextView
+        android:id="@+id/light"
+        android:text="Light Data"
+        android:textSize="18sp"
+        android:layout_marginBottom="20dp"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_height="wrap_content"/>
+
+    <!-- Proximity Sensor Data -->
+    <TextView
+        android:id="@+id/proximity"
+        android:text="Proximity Data"
+        android:textSize="18sp"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>
